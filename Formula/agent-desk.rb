@@ -4,6 +4,8 @@ class AgentDesk < Formula
   version "1.0.29"
   license "MIT"
 
+  depends_on "tmux"
+
   on_macos do
     on_arm do
       url "https://github.com/millwright-software/agent-desk/releases/download/v1.0.29/agent-desk_1.0.29_darwin_arm64.tar.gz"
@@ -24,8 +26,6 @@ class AgentDesk < Formula
       sha256 "f9e543c23a2887250ddc3ef389423063041c09fd96c0f3e89a02f7ef1d0c5b24"
     end
   end
-
-  depends_on "tmux"
 
   def install
     bin.install "agent-desk"
